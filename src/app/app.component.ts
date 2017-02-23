@@ -46,6 +46,10 @@ import {RouterActive} from './router-active';
           </li>
           |
           <li router-active>
+            <a [routerLink]=" ['Home'] ">Home</a>
+          </li>
+          |
+          <li router-active>
             <a [routerLink]=" ['About'] ">About</a>
           </li>
         </ul>

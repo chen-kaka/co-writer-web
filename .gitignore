@@ -41,3 +41,4 @@ android/app/libs
 *.keystore
 
 .idea/
+bower_components/

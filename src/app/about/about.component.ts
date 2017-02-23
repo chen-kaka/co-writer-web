@@ -1,5 +1,5 @@
 import {Component} from 'angular2/core';
-
+import { AccordionComponent } from 'ng2-bootstrap';
 /*
  * We're loading this component asynchronously
  * We are using some magic with es6-promise-loader that will wrap the module with a Promise
