@@ -13,62 +13,14 @@ import {RouterActive} from './router-active';
  * Top Level Component
  */
 @Component({
+  moduleId:module.id,
   selector: 'app',
-  pipes: [ ],
-  providers: [ ],
-  directives: [ RouterActive ],
-  encapsulation: ViewEncapsulation.None,
-  styles: [`
-    body {
-      margin: 0;
-    }
-    md-toolbar ul {
-      display: inline;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      width: 60px;
-    }
-    md-toolbar li {
-      display: inline;
-    }
-    md-toolbar li.active {
-      background-color: lightgray;
-    }
-  `],
-  template: `
-    <md-toolbar color="primary">
-      <span>{{ name }}</span>
-      <nav>
-        <ul>
-          <li router-active>
-            <a [routerLink]=" ['Index'] ">Index</a>
-          </li>
-          |
-          <li router-active>
-            <a [routerLink]=" ['Home'] ">Home</a>
-          </li>
-          |
-          <li router-active>
-            <a [routerLink]=" ['About'] ">About</a>
-          </li>
-        </ul>
-      </nav>
-    </md-toolbar>
-
-    <main>
-      <router-outlet></router-outlet>
-    </main>
-
-    <pre>this.appState.state = {{ appState.state | json }}</pre>
-
-    <footer>
-      WebPack Angular 2 Starter by <a [href]="url">@AngularClass</a>
-      <div>
-        <img [src]="angularclassLogo" width="10%">
-      </div>
-    </footer>
-  `
+  // pipes: [ ],
+  // providers: [ ],
+  // directives: [ RouterActive ],
+  // encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./app.components.css'],
+  templateUrl: './app.components.html',
 })
 @RouteConfig([
   { path: '/',      name: 'Index', component: Home, useAsDefault: true },
