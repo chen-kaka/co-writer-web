@@ -15,12 +15,12 @@ import {RouterActive} from './router-active';
 @Component({
   moduleId:module.id,
   selector: 'app',
-  // pipes: [ ],
+  // pipes: [ ],//声明当前类是一个管道，并且提供关于该管道的元数据
   // providers: [ ],
   // directives: [ RouterActive ],
   // encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./app.components.css'],
-  templateUrl: './app.components.html',
+  template: require('./app.components.html'),
+  // styleUrls: ['./app.components.css'],
 })
 @RouteConfig([
   { path: '/',      name: 'Index', component: Home, useAsDefault: true },
